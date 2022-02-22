@@ -14,7 +14,7 @@ const Book = () => (
     <div>
       <p>CURRENT CHAPTER</p>
       <p>Chapter 17</p>
-      <button>UPDATE PROGRESS</button>
+      <button type='button'>UPDATE PROGRESS</button>
     </div>
   </div>
 );
