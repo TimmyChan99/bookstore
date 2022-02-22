@@ -6,8 +6,12 @@ const Header = () => (
     <p>BookStore CMS</p>
     <nav>
       <ul>
-        <NavLink to="/">BOOKS</NavLink>
-        <NavLink to="/">CATEGORIES</NavLink>
+        <li>
+          <NavLink to="/booksList">BOOKS</NavLink>
+        </li>
+        <li>
+          <NavLink to="/categorie">CATEGORIES</NavLink>
+        </li>
       </ul>
     </nav>
   </header>

@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Form from './components/Form';
-import Book from './components/Book';
 import Header from './components/Header';
+import CategoriesPages from './pages/CategoriesPages';
+import BooksPage from './pages/BooksPage';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/nn" element={<Book />} />
-        <Route path="/" element={<Form />} />
+        <Route path="/booksList" element={<BooksPage />} />
+        <Route path="/categorie" element={<CategoriesPages />} />
       </Routes>
     </Router>
 
