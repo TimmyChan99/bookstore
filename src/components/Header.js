@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => {
-    <header>
+  return ( <header>
         <p>BookStore CMS</p>
         <nav>
             <ul>
@@ -9,7 +9,7 @@ const Header = () => {
                 <li>CATEGORIES</li>
             </ul>
         </nav>
-    </header>
+    </header>)
 }
 
 export default Header;
