@@ -11,9 +11,15 @@ const Book = (props) => {
       <h2>{title}</h2>
       <p>Author</p>
       <ul>
-        <li><button type="button">Comments</button></li>
-        <li><button id={id} type="button" onClick={click}>Remove</button></li>
-        <li><button type="button">Edit</button></li>
+        <li>
+          <button type="button">Comments</button>
+        </li>
+        <li>
+          <button id={id} type="button" onClick={click}>Remove</button>
+        </li>
+        <li>
+          <button type="button">Edit</button>
+        </li>
       </ul>
       <div>64% Completed</div>
       <div>
@@ -25,12 +31,13 @@ const Book = (props) => {
   );
 };
 
-// Book.propTypes = {
-//   bookInfo: PropTypes.shape({
-//     category: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//     click: PropTypes.func.isRequired,
-//   }).isRequired,
-// };
+Book.propTypes = {
+
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  click: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+
+};
 
 export default Book;

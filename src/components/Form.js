@@ -26,12 +26,11 @@ const Form = () => {
   const submitBookToStore = (event) => {
     event.preventDefault();
     const newBook = {
-      id: uuidv4(), // make sure it's unique
+      id: uuidv4(),
       title,
       category,
     };
 
-    // dispatch an action and pass it the newBook object (your action's payload)
     dispatch(addBook(newBook));
   };
 
