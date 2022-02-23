@@ -17,9 +17,14 @@ export const removeBook = (id) => ({
 
 ////////////
 
-export const addBookReducer = () => (dispatch) => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zZ7EZqcy750FMbbnBRfe/books')
+export const addBookReducer = (newBook) => (dispatch) => axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zZ7EZqcy750FMbbnBRfe/books', {
+    "item_id": newBook.id,
+    "title": newBook.title,
+    "category": newBook.category
+})
   .then((res) => {
-    dispatch(addBook(res.data))
+    console.log(res.data);
+    // dispatch(addBook(res.data))
   });
 
 ////////////

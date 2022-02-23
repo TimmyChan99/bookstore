@@ -32,7 +32,7 @@ const Form = () => {
       category,
     };
 
-    dispatch(addBookReducer());
+    dispatch(addBookReducer(newBook));
   };
 
 console.log();
