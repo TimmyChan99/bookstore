@@ -46,7 +46,7 @@ const Form = () => {
           <option value="Science Fiction">Science Fiction</option>
           <option value="Economy">Economy</option>
         </select>
-        <button type="submit" onClick={submitBookToStore}>ADD BOOK</button>
+        <button type="submit">ADD BOOK</button>
       </form>
     </>
   );
