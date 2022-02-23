@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 - Run `git clone https://github.com/TimmyChan99/bookstore.git`
 - Go to the folder `cd bookstore`
 
-- Run `npm install` to start a local server running the command
+- Run `npm install` : To install packages
 
 - Run `npm start` : You should now have the project running locally on a dev server.
  (Open http://localhost:3000 to view it in your browser.)
