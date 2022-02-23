@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
+import * as actionCreators  from '../redux/books/books';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBook, addBookReducer } from '../redux/books/books';
 
 const Form = () => {
   const bookInfo = {
@@ -31,8 +32,10 @@ const Form = () => {
       category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBookReducer());
   };
+
+console.log();
 
   return (
     <>
@@ -50,4 +53,10 @@ const Form = () => {
     </>
   );
 };
-export default Form;
+
+const mapStateToProps = (state) => {
+  return state
+};
+
+export default connect (mapStateToProps, actionCreators)(Form);
+

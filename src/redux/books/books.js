@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
@@ -12,6 +14,15 @@ export const removeBook = (id) => ({
   type: REMOVE_BOOK,
   payload: id,
 });
+
+////////////
+
+export const addBookReducer = () => (dispatch) => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zZ7EZqcy750FMbbnBRfe/books')
+  .then((res) => {
+    dispatch(addBook(res.data))
+  });
+
+////////////
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -29,5 +40,7 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+
 
 export default reducer;
