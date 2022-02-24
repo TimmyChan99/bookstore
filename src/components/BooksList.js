@@ -1,24 +1,21 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
-import { removeBook, getBooks, removeBookReducer } from '../redux/books/books';
+import { getBooks, removeBookReducer } from '../redux/books/books';
 
 const BooksList = () => {
   const dispatch = useDispatch();
 
   const bookInfo = useSelector((state) => state.booksReducer);
-  
+
   const click = (e) => {
     dispatch(removeBookReducer(e.target.id));
   };
 
-  
-
   useEffect(() => {
     dispatch(getBooks());
-  }, [])
-  
- 
+  }, []);
+
   const list = bookInfo.map((item) => (
     <li key={item.id}>
       <Book
@@ -32,12 +29,7 @@ const BooksList = () => {
 
   return (
     <ul>
-     {list}
-      <li>
-        <button type="button" onClick={click}>
-          click
-          </button>
-      </li>
+      {list}
     </ul>
   );
 };
