@@ -6,6 +6,7 @@ import { addBookReducer } from '../redux/books/books';
 const Form = () => {
   const bookInfo = {
     title: '',
+    author: '',
     category: '',
   };
 
@@ -13,7 +14,7 @@ const Form = () => {
 
   const [book, setBook] = useState(bookInfo);
 
-  const { title, category } = book;
+  const { title, category, author } = book;
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,16 +29,20 @@ const Form = () => {
     const newBook = {
       id: uuidv4(),
       title,
+      author,
       category,
     };
+
     dispatch(addBookReducer(newBook));
+    setBook(bookInfo);
   };
 
   return (
     <>
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBookToStore}>
-        <input name="title" type="text" value={title} onChange={handleChange} />
+        <input name="title" type="text" value={title} placeholder="Title" onChange={handleChange} />
+        <input name="author" type="text" value={author} placeholder="Author" onChange={handleChange} />
         <select name="category" id="categories" onChange={handleChange}>
           <option value="none">Category</option>
           <option value="Action">Action</option>

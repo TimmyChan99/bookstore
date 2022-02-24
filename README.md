@@ -1,3 +1,4 @@
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Book Store
@@ -37,7 +38,7 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-## Authors
+## Author
 
 👤 **Fatima Ezzahra**
 
