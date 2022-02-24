@@ -72,7 +72,6 @@ export const getBooks = () => (dispatch) => {
     });
 };
 
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
