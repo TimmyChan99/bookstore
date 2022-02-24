@@ -31,9 +31,7 @@ const Form = () => {
       title,
       category,
     };
-     console.log(newBook);
      dispatch(addBookReducer(newBook));
-    // dispatch(getBooks());
   };
 
 

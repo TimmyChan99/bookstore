@@ -6,6 +6,7 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const FETCH_BOOK_SUCCEED = 'bookStore/books/FETCH_BOOK_SUCCEED';
 const FETCH_BOOK_FAILED = 'bookStore/books/FETCH_BOOK_FAILED';
+const DELETE_BOOK = 'bookStore/books/DELETE_BOOK';
 
 
 const initialState = [];
@@ -20,19 +21,33 @@ export const removeBook = (id) => ({
   payload: id,
 });
 
-/// /////////
+/// DELETE BOOK IN API ///
 
+export const deleteBook = (id) => ({
+  type: DELETE_BOOK,
+  payload: id
+})
+
+export const removeBookReducer = (id) => (dispatch) => axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zZ7EZqcy750FMbbnBRfe/books/${id}`, {
+  "item_id": id,
+})
+  .then((res) => {
+    dispatch(deleteBook(id))
+  })
+  .catch(error => {
+    console.log('error here', error);
+  })
+
+
+///  POST NEW BOOK TO API ///
 export const addBookReducer = (newBook) => (dispatch) => axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zZ7EZqcy750FMbbnBRfe/books', {
   "item_id": newBook.id,
   "title": newBook.title,
   "category": newBook.category
 })
-  .then((res) => {
-    console.log(res.data);
+  .then(() => {
     dispatch(addBook(newBook))
   });
-
-///////////////////////////////////////////////////
 
  ///  FETCH_BOOK_SUCCEED ///
   export const fetchBookSucceed = (booksList) => {
@@ -49,6 +64,8 @@ export const addBookReducer = (newBook) => (dispatch) => axios.post('https://us-
       payload: error
     }
   }
+
+  /// FETCH DATA FROM API ///
 
   export const getBooks = () => (dispatch) => {
   
@@ -90,8 +107,11 @@ const reducer = (state = initialState, action) => {
     case FETCH_BOOK_SUCCEED:
       return action.payload
 
-      case FETCH_BOOK_FAILED:
+    case FETCH_BOOK_FAILED:
         return action.payload
+
+    case DELETE_BOOK:
+      return state
         
     default:
       return state;
