@@ -22,7 +22,6 @@ const BooksList = () => {
         id={item.id}
         click={click}
         title={item.title}
-        author={item.author}
         category={item.category}
       />
     </li>
