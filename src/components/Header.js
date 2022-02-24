@@ -1,16 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import '../styles/header.css';
 
 const Header = () => (
   <header>
-    <p>BookStore CMS</p>
+    <span>BookStore CMS</span>
     <nav>
       <ul>
         <li>
-          <NavLink to="/">BOOKS</NavLink>
+          <NavLink className="nav_link" to="/">BOOKS</NavLink>
         </li>
         <li>
-          <NavLink to="/categorie">CATEGORIES</NavLink>
+          <NavLink className="nav_link" to="/categorie">CATEGORIES</NavLink>
         </li>
       </ul>
     </nav>
