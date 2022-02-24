@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import * as actionCreators  from '../redux/books/books';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook, addBookReducer } from '../redux/books/books';
+import * as actionCreators from '../redux/books/books';
+import { addBook, addBookReducer, getBooks, fetchBook } from '../redux/books/books';
 
 const Form = () => {
   const bookInfo = {
@@ -31,11 +31,11 @@ const Form = () => {
       title,
       category,
     };
-
-    dispatch(addBookReducer(newBook));
+     console.log(newBook);
+     dispatch(addBookReducer(newBook));
+    // dispatch(getBooks());
   };
 
-console.log();
 
   return (
     <>
@@ -54,9 +54,6 @@ console.log();
   );
 };
 
-const mapStateToProps = (state) => {
-  return state
-};
+const mapStateToProps = (state) => state;
 
-export default connect (mapStateToProps, actionCreators)(Form);
-
+export default connect(mapStateToProps, actionCreators)(Form);
