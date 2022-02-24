@@ -71,7 +71,7 @@ export const getBooks = () => (dispatch) => {
       dispatch(fetchBookFailed(errorMsg));
     });
 };
-/// /////////
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
