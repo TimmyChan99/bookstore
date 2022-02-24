@@ -34,6 +34,7 @@ const Form = () => {
     };
 
     dispatch(addBook(newBook));
+    setBook(bookInfo);
   };
 
   return (
