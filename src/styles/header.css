@@ -21,7 +21,7 @@ header {
 
 header span {
     color: #0290ff;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -29,5 +29,15 @@ header span {
     color: #121212;
     text-decoration: none;
     margin: auto 30px;
-    font-size: 0.813rem;
+    font-size: 0.7rem;
+    opacity: .5;
+}
+
+.nav_link.active {
+    opacity: 1;
+}
+
+.user_icon {
+    color: #0290ff;
+    margin-left: auto;
 }

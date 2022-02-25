@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/header.css';
+import { FaUserAlt } from 'react-icons/fa';
 
 const Header = () => (
   <header>
@@ -15,6 +16,7 @@ const Header = () => (
         </li>
       </ul>
     </nav>
+    <FaUserAlt className="user_icon" />
   </header>
 );
 
