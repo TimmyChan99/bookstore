@@ -15,9 +15,11 @@ const Book = (props) => {
           <li>
             <button className="option_btn" type="button">Comments</button>
           </li>
+          <hr />
           <li>
             <button className="option_btn" id={id} type="button" onClick={click}>Remove</button>
           </li>
+          <hr />
           <li>
             <button className="option_btn" type="button">Edit</button>
           </li>
@@ -30,6 +32,7 @@ const Book = (props) => {
           <span>Completed</span>
         </div>
       </div>
+      <hr className="vertical_line" />
       <div className="progress">
         <span>CURRENT CHAPTER</span>
         <span>Chapter 17</span>

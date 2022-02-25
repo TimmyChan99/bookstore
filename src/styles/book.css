@@ -14,7 +14,7 @@ li {
 }
 
 .book_container {
-    background-color: bisque;
+    background-color: #fff;
     width: 80%;
     margin: 10px auto;
     display: flex;
@@ -23,15 +23,29 @@ li {
     border-radius: 4px;
   border: solid 1px #e8e8e8;
   padding: 2rem;
+  color: #121212;
 }
-.progress,
+
 .book_info {
-    width: 33%;
+    width: 25%;
+}
+
+.progress span:first-child,
+.statistic span:last-child,
+.book_info p {
+    opacity: .5;
 }
 
 .book_info ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.book_info hr {
+    height: 20px;
+    align-self: flex-end;
+    border: 0.05em solid #e8e8e8;
 }
 
 .option_btn {
@@ -46,7 +60,7 @@ li {
 .isCompleted {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 20%;
 }
 
 .oval {
@@ -66,13 +80,22 @@ li {
 
 .statistic span:first-child {
     font-size: 1.5rem;
-    color: #121212;
     font-family: 'Montserrat', sans-serif;
 }
 
-.progress {
-    font-size: 15px;
+
+.vertical_line {
+    height: 100px;
+    border: 0.05em solid #e8e8e8;
 }
+
+.progress {
+    width: 20%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .progress button {
   letter-spacing: 0.5px;
@@ -83,4 +106,5 @@ li {
   background-color: #0290ff;
   border: none;
   padding: .4em;
+  margin-top: 20px;
 }
