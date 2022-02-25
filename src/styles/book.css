@@ -2,100 +2,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter:wght@900&family=Lato:ital,wght@1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@200&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
 }
 
-
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .book_container {
-    background-color: #fff;
-    width: 80%;
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 4px;
+  background-color: #fff;
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 4px;
   border: solid 1px #e8e8e8;
   padding: 2rem;
   color: #121212;
 }
 
 .book_info {
-    width: 25%;
+  width: 25%;
 }
 
 .progress span:first-child,
 .statistic span:last-child,
 .book_info p {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .book_info ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book_info hr {
-    height: 20px;
-    align-self: flex-end;
-    border: 0.05em solid #e8e8e8;
+  height: 20px;
+  align-self: flex-end;
+  border: 0.05em solid #e8e8e8;
 }
 
 .option_btn {
-    background: none;
-    border: none;
-    font-size: 0.875rem;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
   margin-top: 1rem;
 }
 
 .isCompleted {
-    display: flex;
-    justify-content: space-around;
-    width: 20%;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
 }
 
 .oval {
-    width: 3rem;
-    height: 3rem;
-    border: 16px solid #f3f3f3;
-    border-width: 5px;
-    border-radius: 50%;
-    border-top: 5px solid #379cf6;
-    transform: rotate(50deg);
+  width: 3rem;
+  height: 3rem;
+  border: 16px solid #f3f3f3;
+  border-width: 5px;
+  border-radius: 50%;
+  border-top: 5px solid #379cf6;
+  transform: rotate(50deg);
 }
 
 .statistic {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .statistic span:first-child {
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-
 .vertical_line {
-    height: 100px;
-    border: 0.05em solid #e8e8e8;
+  height: 100px;
+  border: 0.05em solid #e8e8e8;
 }
 
 .progress {
-    width: 20%;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
+  width: 20%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
 }
-
 
 .progress button {
   letter-spacing: 0.5px;
@@ -105,6 +102,6 @@ li {
   border-radius: 3px;
   background-color: #0290ff;
   border: none;
-  padding: .4em;
+  padding: 0.4em;
   margin-top: 20px;
 }
