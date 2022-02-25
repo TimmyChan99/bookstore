@@ -1,0 +1,12 @@
+.book_list {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.book_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.book_list::-webkit-scrollbar-thumb {
+  color: #e8e8e8;
+}

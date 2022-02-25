@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter:wght@900&family=Lato:ital,wght@1,900&family=Poppins:wght@200&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter:wght@900&family=Lato:ital,wght@1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@200&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+
+.form_container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 30px auto;
+  color: #121212;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form_container h2 {
+  opacity: 0.5;
+}
+
+input[name="title"] {
+  width: 65%;
+  padding: 0.4em;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+}
+
+select {
+  padding: 0.4em;
+  width: 15%;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.select::after {
+  background-color: #0290ff;
+}
+
+.form_container button {
+  width: 10%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.813rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  padding: 0.4em;
+}

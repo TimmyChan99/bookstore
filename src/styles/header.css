@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,700;1,700&family=Inter:wght@900&family=Lato:ital,wght@1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@200&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav ul,
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  border: 1px solid #e8e8e8;
+}
+
+header span {
+  color: #0290ff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav_link {
+  color: #121212;
+  text-decoration: none;
+  margin: auto 30px;
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.nav_link.active {
+  opacity: 1;
+}
+
+.user_icon {
+  color: #0290ff;
+  margin-left: auto;
+}
