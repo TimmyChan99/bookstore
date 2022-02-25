@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookReducer } from '../redux/books/books';
+import '../styles/form.css';
 
 const Form = () => {
   const bookInfo = {
@@ -38,9 +39,9 @@ const Form = () => {
   };
 
   return (
-    <>
+    <div className="form_container">
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={submitBookToStore}>
+      <form className="form" onSubmit={submitBookToStore}>
         <input name="title" type="text" value={title} placeholder="Title" onChange={handleChange} />
         <select name="category" id="categories" onChange={handleChange}>
           <option hidden value="none">Category</option>
@@ -54,7 +55,7 @@ const Form = () => {
         </select>
         <button type="submit">ADD BOOK</button>
       </form>
-    </>
+    </div>
   );
 };
 
