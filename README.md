@@ -20,7 +20,7 @@ The Bookstore is a website that allows you to:
 
 ## Live Demo
 
-[Live Demo Link](https://timmychan99.github.io/bookstore/) (Not ready yet)
+[Live Demo Link](https://bookstore-timmy.herokuapp.com/) 
 
 
 ## Getting Started
